@@ -85,7 +85,10 @@ RPC.connect()
 
 #refresh RPC
 while True:
-    refreshRPC(getPlayerData(auth["server"], auth["username"], auth["password"]))
+    try:
+    	refreshRPC(getPlayerData(auth["server"], auth["username"], auth["password"]))
+    except:
+        pass
     sleep(10)
 
 input()
