@@ -83,12 +83,21 @@ print("Logging in as " + auth["username"] + "...")
 RPC = Presence(auth["discord_token"])
 RPC.connect()
 
+isRpcSet = True
+
 #refresh RPC
 while True:
     try:
-    	refreshRPC(getPlayerData(auth["server"], auth["username"], auth["password"]))
+        refreshRPC(getPlayerData(auth["server"], auth["username"], auth["password"]))
+        if isRpcSet != True:
+            isRpcSet = True
+            print("RPC set")
     except:
-        pass
+        if isRpcSet:
+            print("No song detected, clearing...")
+            RPC.clear()
+            isRpcSet = False
+            print("RPC unset")
     sleep(10)
 
 input()
