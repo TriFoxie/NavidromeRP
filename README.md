@@ -2,27 +2,29 @@
 
 #### *Discord rich presence for [Navidrome](https://www.navidrome.org/)*
 
+![Example Image](example.png)
+
 ## Usage
 
 ### Install/Setup
-1) Have access to a navidrome server
-2) Create a discord application [here](https://discord.com/developers/applications)
-3) Copy the application's **client ID**
-4) Run `NavidromeRP.py` and follow setup
+```bash
+$ git clone https://github.com/TriFoxie/NavidromeRP
+$ cd NavidromeRP
+$ python NavidromeRP.py
+```
+Alternatively, download the [latest release](https://github.com/TriFoxie/NavidromeRP/releases/latest) and run `Navidrome.py`
 
 ### Run as a process
-1) Complete setup
-2) Run `Navidrome.pyw`
-
-### Run on startup
-1) Move `Navidrome.pyw` to startup folder
+Once setup has been completed, you use `Navidrome.pyw` instead to run it as a background process.
 
 ### Dependencies
 - Python
 - Pip
   - pypresence
-  
-`pip install pypresence`
+  - requests
+```bash
+$ pip install pypresence requests
+```
 
 ## Docs
 - [pyPresence](https://qwertyquerty.github.io/pypresence/html/index.html)
